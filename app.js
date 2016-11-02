@@ -1,3 +1,5 @@
+var Analytics = require('analytics-node');
+var analytics = new Analytics('dLGM1pbrDkaTg00AkT97pHlBRrRf2LuW');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
