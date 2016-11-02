@@ -1,5 +1,11 @@
 var Analytics = require('analytics-node');
 var analytics = new Analytics('dLGM1pbrDkaTg00AkT97pHlBRrRf2LuW');
+var userId = 'f4ca124296';
+var userName = "Joe Smith";
+var email = "js@initech.com";
+var greeting = "Hola";
+
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -43,6 +49,23 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+analytics.identify({
+  userId: userId,
+  traits: {
+    name: userName,
+    email: email,
+    createdAt: new Date('2016-06-14T02:00:19.467Z')
+  }
+});
+
+analytics.track({
+  userId: userId,
+  event: 'Viewed Greeting',
+  properties: {
+    greeting: greeting
+  }
 });
 
 module.exports = app;
