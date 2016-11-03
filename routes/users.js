@@ -11,15 +11,18 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.render('users', { title: 'User page' });
+  
+  console.log('Seg: track - Viewed users');
+  analytics.track({
+    userId: userId,
+    event: 'Viewed users',
+    properties: {
+      greeting: greeting
+    }
+  });
+
 });
 
-analytics.track({
-  userId: userId,
-  event: 'Viewed users',
-  properties: {
-    greeting: greeting
-  }
-});
 
 
 module.exports = router;

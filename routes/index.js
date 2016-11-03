@@ -11,14 +11,16 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
-});
 
-analytics.track({
-  userId: userId,
-  event: 'Viewed index',
-  properties: {
-    greeting: greeting
-  }
+  console.log('Seg: track - Viewed index');
+  analytics.track({
+    userId: userId,
+    event: 'Viewed index',
+    properties: {
+      greeting: greeting
+    }
+  });
+
 });
 
 module.exports = router;
