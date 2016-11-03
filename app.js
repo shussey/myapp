@@ -30,8 +30,28 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-app.use('/users', users);
+app.use('/', index,function(req, res, next) {
+  analytics.track({
+    userId: userId,
+    event: 'Viewed Greeting',
+    properties: {
+      greeting: greeting
+    }
+  });
+  next();
+});
+
+
+app.use('/users', users,function(req, res, next) {
+  analytics.track({
+    userId: userId,
+    event: 'Viewed Users',
+    properties: {
+      greeting: greeting
+    }
+  });
+  next();
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -60,12 +80,5 @@ analytics.identify({
   }
 });
 
-analytics.track({
-  userId: userId,
-  event: 'Viewed Greeting',
-  properties: {
-    greeting: greeting
-  }
-});
 
 module.exports = app;
