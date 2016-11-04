@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  h2 Welcome to #{title}
+  p This page is where you would log on
+  p It fires Segment.identify and Segment.track to simulate a login page visit
+  div
+  h2 Links to other pages
+  ul
+    li
+      a(href='/') Home page
+    li
+      a(href='/users') Users page
