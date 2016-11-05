@@ -6,7 +6,7 @@ var email = "bs@initech.com";
 var greeting = "Hola";
 
 exports.identify = function() {
-
+  
   console.log('Seg: Indentify');
   analytics.identify({
     userId: userId,
