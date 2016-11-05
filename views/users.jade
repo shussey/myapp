@@ -1,29 +1,22 @@
-extends layout
+extends fancy-layout
 
 block content
-  h1= title
   h2 Welcome to #{title}
   p This page fires Segment.track
   div
-  h1 Links to other pages
-  ul
-    li
-      a(href='/') Home page
-    li
-      a(href='/logon') Logon page
-  form(action="/")
-    select(name="cars")
-      option(value="volvo") Volvo
-      option(value="fiat") Fiat
-      option(value="audi") Audi
-    br
-    input(type="submit")
-  br
-  form(action="/")
-    select(name="trucks")
-      option(value="mack") Mack
-      option(value="peterbilt") Peterbilt
-    br
-    input(type="submit")
+    form(action="/")
+      select(name="cars")
+        option(value="volvo") Volvo
+        option(value="fiat") Fiat
+        option(value="audi") Audi
+      br
+      input(type="submit")
+  div
+    form(action="/")
+      select(name="trucks")
+        option(value="mack") Mack
+        option(value="peterbilt") Peterbilt
+      br
+      input(type="submit")
 
 
