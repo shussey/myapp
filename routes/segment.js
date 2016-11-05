@@ -29,3 +29,16 @@ exports.track = function(eventName) {
     }
   });
 }
+
+exports.page = function(eventName,url) {
+
+  console.log('Segment: track - ' + eventName);
+  analytics.page({
+    userId: userId,
+    type: "page",
+    name: eventName,
+    properties: {
+      url: url
+    }
+  });
+}
