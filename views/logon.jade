@@ -1,6 +1,82 @@
 extends fancy-layout
 
 block content
-  h2 Welcome to #{title}
-  p This page is where you would log on
-  p It fires Segment.identify and Segment.track to simulate a login page visit
+  // block comment
+    .row
+      .col-md-12
+        h2 #{title}
+        h5 Interesting stuff 
+    hr
+    
+  // Row
+
+  .row
+    .col-md-6
+      // Form Elements
+      .panel.panel-default
+        .panel-heading
+          | Who are you
+        .panel-body
+          form(role='form')
+            .form-group.input-group
+              span.input-group-addon @
+              input.form-control(type='text', placeholder='Username')
+            .form-group
+              label Upload your resume
+              input(type='file')
+            .form-group
+              label How you feel right now
+              textarea.form-control(rows='3')
+    .col-md-6
+      // Form Elements
+      .panel.panel-default
+        .panel-heading
+          | What are you?
+        .panel-body
+          form(role='form')
+            .form-group
+              label Form of life
+              select.form-control(multiple='')
+                option Animal
+                option Mineral
+                option Vegetable
+                option Other
+            button.btn.btn-default(type='submit') Submit Button
+            button.btn.btn-primary(type='reset') Reset Button
+  .row
+    .col-md-6
+      .panel.panel-default
+        .panel-heading What do you drive?
+        .panel-body
+          h4 Types of cars
+          div(style="margin-top: 10px;")
+            .btn-group
+              button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown") Car 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href="#") Volvo
+                li
+                  a(href="#") Fiat
+                li.divider
+                li
+                  a(href="#") Audi
+
+    .col-md-6
+      .panel.panel-default
+        .panel-heading How do you haul?
+        .panel-body
+          h4 Types of trucks
+          div(style="margin-top: 10px;")
+            .btn-group
+              button.btn.btn-danger.dropdown-toggle(data-toggle="dropdown") Truck 
+                span.caret
+              ul.dropdown-menu
+                li
+                  a(href="#") Mack
+                li
+                  a(href="#") Peterbilt
+                li.divider
+                li
+                  a(href="/") Tonka
+

@@ -6,12 +6,6 @@ block content
       div.panel-heading Welcome to #{title}
       div.panel-body
         h5
-          strong Notes
-        div.alert.alert-info This application is written in Node using express and Jade (now called Pug). 
-          a.alert-link(href="http://www.node.com") Node site
-          | . 
-        br
-        h5
           strong Segment
         div.alert.alert-danger.alert-dismissable
           button.close(type="button" data-dismiss="alert" aria-hidden="true") ×
@@ -26,6 +20,18 @@ block content
           | This site is instrumented for Heap. 
           a.alert-link(href="http://www.heap.com") Heap site
           | .                        
+        br
+
+
+  div.col-md-6
+    div.panel.panel-default
+      div.panel-heading Page code and style
+      div.panel-body
+        h5
+          strong Notes
+        div.alert.alert-info This application is written in Node using express and Jade (now called Pug). 
+          a.alert-link(href="http://www.node.com") Node site
+          | . 
         br
         h5
           strong Style information

@@ -2,39 +2,37 @@ extends fancy-layout
 
 block content
   
+  // /. ROW
+  .row
+    .col-md-12
+      // Kitchen Sink
+      .panel.panel-default
+        .panel-heading
+          | Kitchen Sink
+        .panel-body
+          .table-responsive
+            table.table.table-striped.table-bordered.table-hover
+              thead
+                tr
+                  th #
+                  th First Name
+                  th Last Name
+                  th Username
+              tbody
+                tr
+                  td 1
+                  td Mark
+                  td Otto
+                  td @mdo
+                tr
+                  td 2
+                  td Jacob
+                  td Thornton
+                  td @fat
+                tr
+                  td 3
+                  td Larry
+                  td the Bird
+                  td @twitter
+      // End  Kitchen Sink
   
-  div.col-md-5
-    div.panel.panel-default
-      div.panel-heading Vehicle selection 1
-      div.panel-body
-        h4 Types of cars
-        div(style="margin-top: 10px;")
-          div.btn-group
-            button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown") Car 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href="#") Volvo
-              li
-                a(href="#") Fiat
-              li.divider
-              li
-                a(href="#") Audi
-
-  div.col-md-5
-    div.panel.panel-default
-      div.panel-heading Vehicle selection 2
-      div.panel-body
-        h4 Types of trucks
-        div(style="margin-top: 10px;")
-          div.btn-group
-            button.btn.btn-danger.dropdown-toggle(data-toggle="dropdown") Truck 
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href="#") Mack
-              li
-                a(href="#") Peterbilt
-              li.divider
-              li
-                a(href="/") Tonka
