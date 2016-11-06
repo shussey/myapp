@@ -1,6 +1,41 @@
 extends fancy-layout
 
 block content
-  h2 Welcome to #{title}
-  p This app is written in node.js using express. It is instrumented with segment to track all pages and also has direct Heap tagging.
-
+  div.col-md-6
+    div.panel.panel-default
+      div.panel-heading Welcome to #{title}
+      div.panel-body
+        h5
+          strong Notes
+        div.alert.alert-info This application is written in Node using express and Jade (now called Pug). 
+          a.alert-link(href="http://www.node.com") Node site
+          | . 
+        br
+        h5
+          strong Segment
+        div.alert.alert-danger.alert-dismissable
+          button.close(type="button" data-dismiss="alert" aria-hidden="true") ×
+          | This site is instrumented for Segment. 
+          a.alert-link(href="http://www.segment.com") Segment site
+          | . 
+        br
+        h5
+          strong Heap
+        div.alert.alert-warning.alert-dismissable
+          button.close(type="button" data-dismiss="alert" aria-hidden="true") ×
+          | This site is instrumented for Heap. 
+          a.alert-link(href="http://www.heap.com") Heap site
+          | .                        
+        br
+        h5
+          strong Style information
+        div.alert.alert-success.alert-dismissable
+          button.close(type="button" data-dismiss="alert" aria-hidden="true") ×
+          | Info: You can use other classes like 
+          i alert-success
+          |  , 
+          i alert-warning
+          |  & 
+          i alert-danger
+          |  instead of 
+          i alert-info
