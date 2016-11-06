@@ -3,20 +3,79 @@ extends fancy-layout
 block content
   h2 Welcome to #{title}
   p This page fires Segment.track
-  div
-    form(action="/")
-      select(name="cars")
-        option(value="volvo") Volvo
-        option(value="fiat") Fiat
-        option(value="audi") Audi
-      br
-      input(type="submit")
-  div
-    form(action="/")
-      select(name="trucks")
-        option(value="mack") Mack
-        option(value="peterbilt") Peterbilt
-      br
-      input(type="submit")
+  
 
+  div.col-md-6
+    div.panel.panel-default
+      div.panel-heading Welcome to Logon
+      div.panel-body
+        h5
+          strong Notes
+        div.alert.alert-info This application is written in Node using express and Jade (now called Pug). 
+          a.alert-link(href="http://www.node.com") Node site
+          | . 
+        br
+        h5
+          strong Segment
+        div.alert.alert-danger.alert-dismissable
+          button.close(type="button" data-dismiss="alert" aria-hidden="true") ×
+          | This site is instrumented for Segment. 
+          a.alert-link(href="http://www.segment.com") Segment site
+          | . 
+        br
+        h5
+          strong Heap
+        div.alert.alert-warning.alert-dismissable
+          button.close(type="button" data-dismiss="alert" aria-hidden="true") ×
+          | This site is instrumented for Heap. 
+          a.alert-link(href="http://www.heap.com") Heap site
+          | .                        
+        br
+        h5
+          strong Style information
+        div.alert.alert-success.alert-dismissable
+          button.close(type="button" data-dismiss="alert" aria-hidden="true") ×
+          | Info: You can use other classes like 
+          i alert-success
+          |  , 
+          i alert-warning
+          |  & 
+          i alert-danger
+          |  instead of 
+          i alert-info
+  
+  div.col-md-5
+    div.panel.panel-default
+      div.panel-heading Vehicle selection 1
+      div.panel-body
+        h4 Types of cars
+        div(style="margin-top: 10px;")
+          div.btn-group
+            button.btn.btn-primary.dropdown-toggle(data-toggle="dropdown") Car 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href="#") Volvo
+              li
+                a(href="#") Fiat
+              li.divider
+              li
+                a(href="#") Audi
 
+  div.col-md-5
+    div.panel.panel-default
+      div.panel-heading Vehicle selection 2
+      div.panel-body
+        h4 Types of trucks
+        div(style="margin-top: 10px;")
+          div.btn-group
+            button.btn.btn-danger.dropdown-toggle(data-toggle="dropdown") Truck 
+              span.caret
+            ul.dropdown-menu
+              li
+                a(href="#") Mack
+              li
+                a(href="#") Peterbilt
+              li.divider
+              li
+                a(href="/") Tonka
