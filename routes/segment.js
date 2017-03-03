@@ -53,7 +53,16 @@ exports.page = function(eventName, url) {
         type: "page",
         name: eventName,
         properties: {
-            url: url
+            url: url,
+            sourceDatasets: {
+                bytesRead: 2000,
+                bytesReadIncremental: 0,
+                columnsRead: 10,
+                name: "/user/icsuser/testDirectory/accounts.csv",
+                rowsRead: 8,
+                secureGateway: false,
+                type: "db2"
+            }
         }
     });
 }
