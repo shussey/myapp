@@ -62,7 +62,8 @@ exports.page = function(eventName, url) {
                 rowsRead: 8,
                 secureGateway: false,
                 type: "db2"
-            }
+            },
+            yolo: "you only live once"
         }
     });
 }
