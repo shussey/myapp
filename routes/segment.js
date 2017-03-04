@@ -26,15 +26,15 @@ exports.track = function(eventName) {
         event: eventName,
         properties: {
             greeting: greeting,
-            sourceDatasets: {
-                bytesRead: 2000,
-                bytesReadIncremental: 0,
-                columnsRead: 10,
-                name: "/user/icsuser/testDirectory/accounts.csv",
-                rowsRead: 8,
-                secureGateway: false,
-                type: "db2"
-            },
+            sourceDatasets: [{
+                    bytesRead: 2000,
+                    rowsRead: 8
+                },
+                {
+                    bytesRead: 1000,
+                    rowsRead: 4
+                }
+            ],
             yolo: "you only live twice"
         }
     });
