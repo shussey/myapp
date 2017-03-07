@@ -35,6 +35,20 @@ exports.track = function(eventName) {
                     rowsRead: 4
                 }
             ],
+            destinationDataset: {
+                bytesRead: 2000,
+                rowsRead: 8
+            },
+            transformedDatasets: {
+                inputRows: {
+                    bytesRead: 2000,
+                    rowsRead: 8
+                },
+                outputRows: {
+                    bytesRead: 1000,
+                    rowsRead: 4
+                }
+            },
             yolo: "you only live twice"
         }
     });
