@@ -5,7 +5,7 @@ var router = express.Router();
 
 
 exports.index = router.get('/', function(req, res) {
-    var pageName = "Nesting Props"
+    var pageName = "Main Page"
         //segment.page(pageName,'/');
     res.render('index', { title: pageName });
     segment.track(pageName);
