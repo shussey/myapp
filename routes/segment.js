@@ -1,5 +1,5 @@
 var Analytics = require('analytics-node');
-var analytics = new Analytics('dLGM1pbrDkaTg00AkT97pHlBRrRf2LuW');
+var analytics = new Analytics('DUtkEscXhiugJxXazxySGof0sad8ZUl0');
 var userId = 'f4ca124266';
 var userName = "Bob Smith";
 var email = "bs@initech.com";
